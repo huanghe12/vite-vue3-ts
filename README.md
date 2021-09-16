@@ -12,3 +12,5 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 ## Record
 This is my first vue3 project
+
+本项目旨在学习vue3 ts vite,有错误的地方还请多多指教

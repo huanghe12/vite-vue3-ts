@@ -14,8 +14,8 @@
  */
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-const Home = () => import('../pages/home.vue')
-const Content = () => import('../pages/content.vue')
+const Home = () => import('@/views/home.vue')
+const Content = () => import('@/views/content.vue')
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -28,11 +28,30 @@ const routes: Array<RouteRecordRaw> = [
 		component: Home
 	},
 	{
+		path: '/details',
+		name: 'details',
+		component: () => import('../views/details.vue')
+	},
+	{
 		path: '/content',
 		name: 'content',
 		component: Content
+	},
+	{
+		path: '/todo/ToDoHome',
+		name: 'addTodo',
+		component: () => import('../views/ToDo/ToDoHome.vue')
+	},
+	{
+		path: '/:pathMatch(.*)*', // 代替vue2的通配符 path: '*',
+		name: 'NotFound',
+		component: () => import('@/views/NotFound.vue')
 	}
 ]
+/*
+	createWebHashHistory 是hash模式就是访问链接带有#
+	createWebHistory  是history模式
+*/
 const router = createRouter({
 	history: createWebHistory(),
 	routes
