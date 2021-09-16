@@ -43,6 +43,11 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import('../views/ToDo/ToDoHome.vue')
 	},
 	{
+		path: '/news',
+		name: 'news',
+		component: () => import('@/views/news.vue')
+	},
+	{
 		path: '/:pathMatch(.*)*', // 代替vue2的通配符 path: '*',
 		name: 'NotFound',
 		component: () => import('@/views/NotFound.vue')
