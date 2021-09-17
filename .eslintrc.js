@@ -26,8 +26,8 @@ module.exports = {
 	extends: [
 		'plugin:vue/essential',
 		'airbnb-base',
-		'plugin:prettier/recommended', // 添加 prettier 插件
-		'prettier'
+		'plugin:prettier/recommended' // 添加 prettier 插件
+		// 'prettier'
 		// 'plugin:import/typescript'
 	],
 	parserOptions: {
@@ -39,6 +39,7 @@ module.exports = {
 	rules: {
 		'no-console': 'off', // 解决 Unexpected console statement.(no-console)
 		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+		'import/no-unresolved': 'off',
 		// 这个是解决不写后缀报错的问题
 		'import/extensions': [
 			'error',
@@ -71,6 +72,8 @@ module.exports = {
 		],
 		'no-shadow': 'off',
 		'vue/no-multiple-template-root': 'off', // vue2不支持根结点未非单个节点,但vue3支持,所以关掉
-		'vue/valid-template-root': 'off' // vue3允许html模版中没有根标签
+		'vue/valid-template-root': 'off', // vue3允许html模版中没有根标签
+		'import/prefer-default-export': 'off', // 首选默认导出
+		'consistent-return': 'off'
 	}
 }

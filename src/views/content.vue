@@ -26,7 +26,7 @@ export default defineComponent({
 		watch(
 			checked, // 监听对象
 			// 回调函数,当监听对象发生变化时执行
-			(value) => {
+			value => {
 				todo.done = !!value
 			},
 			{
@@ -55,11 +55,11 @@ export default defineComponent({
 			console.log(1)
 			// 调用异步函数，通过 .then 获取返回值
 			asyncFn(18)
-				.then((res) => {
+				.then(res => {
 					console.log('===>', res)
 				})
 				// 通过 .catch捕获异常
-				.catch((err) => {
+				.catch(err => {
 					console.log('err', err)
 				})
 		}

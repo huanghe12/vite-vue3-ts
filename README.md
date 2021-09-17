@@ -15,3 +15,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 This is my first vue3 project
 
 本项目旨在学习vue3 ts vite,有错误的地方还请多多指教
+
+以下网址有免费的API:
+1.<https://jsonplaceholder.typicode.com/>
+2.<https://hn.algolia.com/api>

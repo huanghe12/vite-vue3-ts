@@ -77,6 +77,7 @@ export default defineComponent({
 			<el-button type="primary">点我一下</el-button>
 		</ul>
 		<el-button @click="router.push('/todo/ToDoHome')">count</el-button>
+		<el-button @click="router.push('/news')">news</el-button>
 	</div>
 </template>
 

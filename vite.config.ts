@@ -8,7 +8,8 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			// 如果报错__dirname找不到,需要执行npm install @types/node --save-dev
-			'@': resolve(__dirname, './src') // 配置 @ 表示src
+			'@': resolve(__dirname, './src'), // 配置 @ 表示src
+			'@api': resolve(__dirname, './src/api')
 		},
 		extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'] // 导入时想要省略的扩展名
 	},
